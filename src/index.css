@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(circle at 15% 0%, #f3e8ff 0%, transparent 45%),
+    radial-gradient(circle at 90% 10%, #ffe4f1 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, #e0f2fe 0%, transparent 45%),
+    #fbf9ff;
+  color: #3b1f5c;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Global animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(6px, -8px) scale(1.08);
+    opacity: 0.75;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.fade-in {
+  animation: fadeInUp 0.7s ease both;
+}
+
+/* Section layout primitives used by every component */
+.section-container {
+  width: min(1150px, 92%);
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+.section-label {
+  display: inline-block;
+  color: #8b5cf6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 999px;
+}
+
+.section-title {
+  font-size: clamp(30px, 4.5vw, 44px);
+  font-weight: 800;
+  color: #2e1065;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.section-description {
+  max-width: 720px;
+  color: #5b4b7a;
+  font-size: 16.5px;
+}
